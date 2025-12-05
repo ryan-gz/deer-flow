@@ -61,7 +61,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port",
         type=int,
-        default=8000,
+        default=18801,
         help="Port to bind the server to (default: 8000)",
     )
     parser.add_argument(
