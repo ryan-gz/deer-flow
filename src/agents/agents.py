@@ -4,6 +4,9 @@
 import logging
 from typing import List, Optional
 
+# TODO: Switch to new feature of LangChain ver1.1.0 
+# from langchain.agents import create_agent
+
 from langgraph.prebuilt import create_react_agent
 
 from src.agents.tool_interceptor import wrap_tools_with_interceptor

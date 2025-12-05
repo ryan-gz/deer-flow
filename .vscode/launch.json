@@ -1,7 +1,6 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Debug Tests",
             "type": "debugpy",
@@ -50,7 +49,11 @@
                 "PYTHONPATH": "${workspaceFolder}"
             },
             "args": [
-                "--debug", "--max_plan_iterations", "1", "--max_step_num", "1"
+                "--debug",
+                "--max_plan_iterations",
+                "1",
+                "--max_step_num",
+                "1"
             ]
         },
         {
@@ -70,6 +73,12 @@
             "request": "launch",
             "program": "${workspaceFolder}/server.py",
             "console": "integratedTerminal",
+            "args": [
+                "--port",
+                "18801",
+                "--log-level",
+                "debug"
+            ],
             "justMyCode": false,
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
@@ -87,20 +96,6 @@
             }
         },
         {
-            "name": "Debug: python server",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/server.py",
-            "console": "integratedTerminal",
-            "justMyCode": false,
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            },
-            "args": [
-                "--reload"
-            ]
-        },
-        {
             "name": "Debug: nodejs web",
             "type": "node",
             "request": "launch",
@@ -112,10 +107,4 @@
             "console": "integratedTerminal"
         },
     ],
-    "compounds": [
-        {
-            "name": "Launch Deerflow",
-            "configurations": ["Debug: python server", "Debug: nodejs web"]
-        }
-    ]
 }
